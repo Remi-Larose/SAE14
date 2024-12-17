@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuration des couleurs */
+:root {
+    --background-color: #141414;
+    --text-color: #f3f3f3;
+    --accent-color: #ff3366;
+    --dark-bg: #1a1a1a;
+    color: yellow;
+    --loader-color: rgb(8, 3, 22);
+    
+}
+
+/* Styles de base */
+body {
+    font-family: "Instrument Sans", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+
+.image-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem 0;
+}
+
+/* Header */
+.header {
+    background-image: url("images/forever.png");
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: 0.5s; 
+}
+
+.nav-links a:hover {
+    color: blue;
+    letter-spacing: 5px;
+    text-decoration: underline;
+
+}
+
+.text span,
+.argument {
+  color: var(--accent-color);
+}
+
+/* Sections */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section.dark {
+    background-color: var(--dark-bg);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.argument {
+    --accent-color: #ff3366;
+  
+}
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
+
+/* Section Meilleur Vœux */
+
+.meilleurvoeux-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.meilleurvoeux-section h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.meilleurvoeux-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.meilleurvoeux-section p {
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.albums-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Style pour chaque album */
+.album-box {
+    flex: 1 1 calc(25% - 1rem); /* Prend 25% de la largeurs */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.album-box img {
+    width: 100%;
+    max-width: 200px; /* Taille maximale pour chaque image */
+    height: auto;
+    border-radius: 10px;
+}
+
+.album-box p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Effet au survol */
+.album-box:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+/* Centrage global du loader */
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--loader-color, rgba(0, 0, 0, 0.8));
+    z-index: 1000;
+    animation: fade-out 5s forwards;
+  }
+  
+  .bar {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+  }
+  
+  .bar:nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: 0.25s;
+  }
+  
+  .bar:nth-child(3) {
+    height: 25px;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes scale-up4 {
+    0%, 100% {
+      transform: scaleY(1);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      transform: scaleY(1.5);
+      background-color: #ffffff;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 2;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden; /* Masque complètement l'élément */
+    }
+  }
